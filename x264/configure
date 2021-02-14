@@ -572,10 +572,10 @@ else
 fi
 
 if [ "x$host" = x ]; then
-    host="$(${SRCPATH}/config.guess)"
+    host="$(bash ${SRCPATH}/config.guess)"
 fi
 # normalize a triplet into a quadruplet
-host="$(${SRCPATH}/config.sub $host)"
+host="$(bash ${SRCPATH}/config.sub $host)"
 
 # split $host
 host_cpu="${host%%-*}"
@@ -1406,7 +1406,7 @@ cat > x264_config.h << EOF
 #define X264_CHROMA_FORMAT $config_chroma_format
 EOF
 
-${SRCPATH}/version.sh >> x264_config.h
+bash ${SRCPATH}/version.sh >> x264_config.h
 
 if [ "$shared" = "yes" ]; then
     CFLAGSSO="$CFLAGSSO -DX264_API_EXPORTS"

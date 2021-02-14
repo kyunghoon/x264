@@ -213,7 +213,7 @@ endif
 
 ifeq ($(HAVE_OPENCL),yes)
 common/oclobj.h: common/opencl/x264-cl.h $(wildcard $(SRCPATH)/common/opencl/*.cl)
-	cat $^ | $(SRCPATH)/tools/cltostr.sh $@
+	cat $^ | bash $(SRCPATH)/tools/cltostr.sh $@
 GENERATED += common/oclobj.h
 SRCS_8 += common/opencl.c encoder/slicetype-cl.c
 endif
