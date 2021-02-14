@@ -5,8 +5,8 @@ use std::process::Command;
 use std::path;
 
 fn main() {
-    //let out_dir = std::env::var_os("OUT_DIR").map(|s| path::PathBuf::from(s).join("x264-build")).unwrap();
-    let out_dir = std::env::current_dir().unwrap();
+    let out_dir = std::env::var_os("OUT_DIR").map(|s| path::PathBuf::from(s).join("x264-build")).unwrap();
+    //let out_dir = std::env::current_dir().unwrap();
     let install_dir = out_dir.join("x264-build");
 
     let inner_dir = path::PathBuf::from("x264");
