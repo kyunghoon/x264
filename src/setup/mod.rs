@@ -36,7 +36,7 @@ impl Setup {
     }
 
     pub fn keyint_max(mut self, interval: u32) -> Self {
-        self.raw.i_keyint_max = interval;
+        self.raw.i_keyint_max = interval as i32;
         self
     }
 

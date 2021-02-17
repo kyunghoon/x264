@@ -1,6 +1,6 @@
 [package]
 name = "x264"
-version = "0.1.4"
+version = "0.1.5"
 authors = ["kyunghoon <kyunghoon@gmail.com>"]
 edition = "2018"
 
