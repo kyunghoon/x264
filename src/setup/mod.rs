@@ -35,6 +35,11 @@ impl Setup {
         Self { raw }
     }
 
+    pub fn keyint_max(mut self, interval: u32) -> Self {
+        self.raw.i_keyint_max = interval;
+        self
+    }
+
     /// Makes the first pass faster.
     pub fn fastfirstpass(mut self) -> Self {
         unsafe { x264_param_apply_fastfirstpass(&mut self.raw); }
