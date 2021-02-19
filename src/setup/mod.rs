@@ -35,6 +35,10 @@ impl Setup {
         Self { raw }
     }
 
+    pub fn keyint_min(mut self, interval: u32) -> Self {
+        self.raw.i_keyint_min = interval as i32;
+        self
+    }
     pub fn keyint_max(mut self, interval: u32) -> Self {
         self.raw.i_keyint_max = interval as i32;
         self
