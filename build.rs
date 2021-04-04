@@ -11,7 +11,7 @@ fn main() {
 
     let inner_dir = path::PathBuf::from("x264");
 
-    if !Command::new("bash")
+    if !Command::new("sh")
         .arg("configure")
         .arg(format!("--prefix={}", install_dir.display()))
         .arg("--enable-static")
